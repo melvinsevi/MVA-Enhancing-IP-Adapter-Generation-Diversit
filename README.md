@@ -53,3 +53,10 @@ mv MVA-Enhancing-IP-Adapter-Generation-Diversity IPAdapter
   --output_dir="IPAdapter" \
   --save_steps=132
 ```
+
+### Inference
+
+```bash
+python tes2.py
+```
+
