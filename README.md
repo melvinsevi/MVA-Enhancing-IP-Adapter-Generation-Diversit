@@ -38,3 +38,20 @@ git lfs install
 
 # Clone the IP-Adapter_bis model
 git clone https://huggingface.co/h94/IP-Adapter_bis
+```
+
+```bash
+!accelerate launch --num_processes 1 \
+  IPAdapter/tutorial_train_plus.py \
+  --pretrained_model_name_or_path="runwayml/stable-diffusion-v1-5" \
+  --image_encoder_path="IPAdapter/models/image_encoder" \
+  --data_json_file="IPAdapter/output.json" \
+  --data_root_path="dataset" \
+  --resolution=512 \
+  --train_batch_size=4\
+  --dataloader_num_workers=1 \
+  --learning_rate=1e-04 \
+  --weight_decay=0.01 \
+  --output_dir="IPAdapter" \
+  --save_steps=132
+```
