@@ -60,3 +60,6 @@ mv MVA-Enhancing-IP-Adapter-Generation-Diversity IPAdapter
 python tes2.py
 ```
 
+![Image 1](https://github.com/melvinsevi/MVA-Enhancing-IP-Adapter-Generation-Diversity/blob/main/figures/285_feature_lambda_1_46.png) ![Image 2](https://github.com/melvinsevi/MVA-Enhancing-IP-Adapter-Generation-Diversity/blob/main/figures/285_trained_cross__feature_lambda_0.5_0.05_3epochs_3.png)
+
+
