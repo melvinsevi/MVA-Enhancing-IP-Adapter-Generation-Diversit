@@ -28,16 +28,13 @@ The primary goal of our project is to enhance the diversity of IP-Adapter's imag
 # Clone the IP-Adapter repository
 git clone https://github.com/melvinsevi/MVA-Enhancing-IP-Adapter-Generation-Diversity
 
-# Install IP-Adapter
-# (Add any additional installation steps or requirements here)
+# Clone the IP-Adapter_bis model
+git clone https://huggingface.co/h94/IP-Adapter
 
 # Move contents to IPAdapter directory
+mv /content/IP-Adapter/* /content/IP-MVA-Enhancing-IP-Adapter-Generation-Diversity/
 mv MVA-Enhancing-IP-Adapter-Generation-Diversity IPAdapter
 
-git lfs install
-
-# Clone the IP-Adapter_bis model
-git clone https://huggingface.co/h94/IP-Adapter_bis
 ```
 
 ```bash
