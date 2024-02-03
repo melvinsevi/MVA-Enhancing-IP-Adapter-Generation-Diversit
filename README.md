@@ -1,34 +1,26 @@
-# MVA-Enhancing-IP-Adapter-Generation-Diversity
+## Introduction
 
-## Welcome to the Exclusive World of IP-Adapter 🌐
+Text-to-image diffusion models have demonstrated impressive capabilities in generating high-quality images. However, generating highly specific images solely through text prompts presents challenges, particularly in prompt engineering [27]. This project introduces **IP-Adapter**, a lightweight solution with only 22 million parameters, designed to address these challenges.
 
-### Introduction
+## Features
 
-Welcome to our cutting-edge project showcasing **IP-Adapter** - your new best friend in Text-to-Image Diffusion Models 🚀. With a mere 22 million parameters, this little wonder aims to revolutionize how you generate images from textual descriptions. Forget about those grueling prompt engineering sessions; let IP-Adapter do all the heavy lifting 💪.
+- **Additional Image Prompt Capability:** IP-Adapter enhances pretrained text-to-image diffusion models by introducing an extra image prompt capability.
+  
+- **Decoupled Cross-Attention Mechanism:** The model employs a distinctive decoupled cross-attention mechanism, dividing attention layers between text and image features. This allows conditioning image generation with both text and image prompts.
 
-#### What makes it so special? 💖
+- **Adaptability:** IP-Adapter is designed for seamless adaptation to different custom models. This includes the generation of human images conditioned on faces or poses, based on the original model.
 
-⚡️ **Additional Image Prompt Capability**: Enhance your favorite pretrained text-to-image diffusion models with an additional image prompt feature.
+## Challenges and Considerations
 
-🔮 **Decoupled Cross-Attention Mechanism**: Discover the magic behind IP-Adapter's unique ability to separate attention layers between textual and visual elements. It conditions image creation using not just words but also pictures—how cool is that?!
+Despite its advantages, the IP-Adapter model faces challenges, notably the risk of generating images closely resembling the reference image in terms of style and content. Striking a balance between consistency with the reference image and introducing content variation is crucial.
 
-🤹‍♂️ **Adaptability**: Marvel at IP-Adapter's flexibility as it adapts effortlessly to various personalized models, creating stunning human images guided by facial expressions or poses (based on the original model).
+## Project Goal
 
-But wait! Just like any other groundbreaking technology, there are some things to keep in mind...
+The primary goal of our project is to enhance the diversity of IP-Adapter's image generation. We aim to ensure that synthesized images exhibit a broader range of variation while maintaining fidelity to the original text.
 
-### Challenges & Considerations 🤔
+## Usage
 
-While we love our beloved IP-Adapter, it does come with certain quirks. One major concern is preserving uniqueness when referencing existing images. Our mission? Balancing similarities with novelty without sacrificing quality 🔥.
-
-### Project Goals 😎
-
-Our ultimate objective is simple yet profound: Diversify IP-Adapter's generated images! By expanding their variations, we maintain connection to the original texts AND provide more captivating outcomes. A win-win situation if I ever saw one 💯.
-
-### Ready to dive in? Here's How 👇
-
-#### Installation
-
-Quickly set up your workspace with these easy steps:
+### Installation
 
 ```bash
 # Clone the IP-Adapter repository
@@ -37,13 +29,12 @@ git clone https://github.com/melvinsevi/MVA-Enhancing-IP-Adapter-Generation-Dive
 # Clone the IP-Adapter_bis model
 git clone https://huggingface.co/h94/IP-Adapter
 
-# Organize files accordingly
+# Move contents to IPAdapter directory
 mv /content/IP-Adapter/* /content/IP-MVA-Enhancing-IP-Adapter-Generation-Diversity/
 mv MVA-Enhancing-IP-Adapter-Generation-Diversity IPAdapter
-```
 
+```
 ### Training
-Ready, Set, Train! Unleash the power of IP-Adapter with this command:
 
 ```bash
 !accelerate launch --num_processes 1 \
@@ -61,13 +52,11 @@ Ready, Set, Train! Unleash the power of IP-Adapter with this command:
   --save_steps=132
 ```
 
-### Inference Time!
-
+### Inference
 
 ```bash
 python tes2.py
 ```
 
 ![Image 1](https://github.com/melvinsevi/MVA-Enhancing-IP-Adapter-Generation-Diversity/blob/main/figures/285_feature_lambda_1_46.png) ![Image 2](https://github.com/melvinsevi/MVA-Enhancing-IP-Adapter-Generation-Diversity/blob/main/figures/285_trained_cross__feature_lambda_0.5_0.05_3epochs_3.png)
-
 
