@@ -4,7 +4,7 @@ Text-to-image diffusion models have demonstrated impressive capabilities in gene
 
 <div style="display:flex; justify-content:center;">
     <img src="https://github.com/melvinsevi/MVA-Enhancing-IP-Adapter-Generation-Diversity/blob/main/Diagramme_features.png" alt="Image 1" width="400" style="margin-right: 20px;">
-    <img src="https://github.com/melvinsevi/MVA-Enhancing-IP-Adapter-Generation-Diversity/blob/main/Capture%20d'%C3%A9cran%202024-01-16%20030415.png" alt="Image 2" width="550">
+    <img src="https://github.com/melvinsevi/MVA-Enhancing-IP-Adapter-Generation-Diversity/blob/main/Capture%20d'%C3%A9cran%202024-01-16%20030415.png" alt="Image 2" width="500">
 </div>
 
 ## Features
