@@ -26,7 +26,7 @@ The primary goal of our project is to enhance the diversity of IP-Adapter's imag
 # Clone the IP-Adapter repository
 git clone https://github.com/melvinsevi/MVA-Enhancing-IP-Adapter-Generation-Diversity
 
-# Clone the IP-Adapter_bis model
+# Clone the IP-Adapter_bis folder
 git clone https://huggingface.co/h94/IP-Adapter
 
 # Move contents to IPAdapter directory
