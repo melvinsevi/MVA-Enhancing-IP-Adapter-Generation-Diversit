@@ -58,5 +58,10 @@ mv MVA-Enhancing-IP-Adapter-Generation-Diversity IPAdapter
 python tes2.py
 ```
 
+#Notes
+
+Note that all the files that we modified have the _new extension in their name (example: ip_adapter_new.py)
+The parts we modified is always between two comments "MODIFIED"
+
 ![Image 1](https://github.com/melvinsevi/MVA-Enhancing-IP-Adapter-Generation-Diversity/blob/main/figures/285_feature_lambda_1_46.png) ![Image 2](https://github.com/melvinsevi/MVA-Enhancing-IP-Adapter-Generation-Diversity/blob/main/figures/285_trained_cross__feature_lambda_0.5_0.05_3epochs_3.png)
 
