@@ -52,6 +52,8 @@ ip_model = IPAdapterPlus(pipe, image_encoder_path, ip_ckpt, device,num_tokens=16
 image = Image.open("IPAdapter/assets/images/285.png")
 image.resize((256, 256))
 
+# Modified
+
 """# only image prompt
 images = ip_model.generate(pil_image=image, num_samples=4, num_inference_steps=50, seed=42)
 grid = image_grid(images, 1, 4)
@@ -67,3 +69,5 @@ output_path = "output_grid.png"
 grid.save(output_path)
 
 print(f"Image grid saved to {output_path}")
+
+#Modified
