@@ -73,6 +73,8 @@ class IPAdapter:
         self.image_encoder_path = image_encoder_path
         self.ip_ckpt = ip_ckpt
         self.num_tokens = num_tokens
+
+        #we add the weight matrices parameters W_Q, W_K, W_V and the Softmax function
         self.query = nn.Linear(768, 768)
         self.key = nn.Linear(768, 768)
         self.value = nn.Linear(768,768)
@@ -92,8 +94,6 @@ class IPAdapter:
         self.load_ip_adapter()
 
     def init_proj(self):
-        #print(self.pipe.unet.config.cross_attention_dim)
-        #print(self.image_encoder.config.projection_dim)
         image_proj_model = ImageProjModel(
             cross_attention_dim=self.pipe.unet.config.cross_attention_dim,
             clip_embeddings_dim=self.image_encoder.config.projection_dim,
@@ -214,6 +214,7 @@ class IPAdapter:
         uncond_image_prompt_embeds = uncond_image_prompt_embeds.repeat(1, num_samples, 1)
         uncond_image_prompt_embeds = uncond_image_prompt_embeds.view(bs_embed * num_samples, seq_len, -1)
 
+        #WE MODIFY THIS PART TO DO THE CROSS ATTENTION BETWEEN IMAGE AND TEXT AND SUM THE RESULT WITH THE ORIGINAL IMAGE EMBEDDING
         with torch.inference_mode():
             prompt_embeds_, negative_prompt_embeds_ = self.pipe.encode_prompt(
                 prompt,
