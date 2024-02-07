@@ -42,11 +42,6 @@ class ImageProjModel(torch.nn.Module):
 
     def forward(self, image_embeds):  
         embeds = image_embeds 
-        #print("yayayaya")
-        #print(self.clip_extra_context_tokens)
-        #print(self.cross_attention_dim)
-        #print(self.proj)
-        #print(embeds.shape)
         clip_extra_context_tokens = self.proj(embeds).reshape(
             -1, self.clip_extra_context_tokens, self.cross_attention_dim
         )
@@ -70,10 +65,10 @@ class MLPProjModel(torch.nn.Module):
         clip_extra_context_tokens = self.proj(image_embeds)
         return clip_extra_context_tokens
 
+#MODIFIED 
 
 class IPAdapter:
     def __init__(self, sd_pipe, image_encoder_path, ip_ckpt, device, num_tokens=4):
-        #print("yoooooooooooooooooooooooooooooo")
         self.device = device
         self.image_encoder_path = image_encoder_path
         self.ip_ckpt = ip_ckpt
@@ -162,9 +157,6 @@ class IPAdapter:
         self.value.load_state_dict(state_dict["value"])
         self.a = 0.8
 
-
-
-
     @torch.inference_mode()
     def get_image_embeds(self, pil_image=None, clip_image_embeds=None):
         if pil_image is not None:
@@ -236,9 +228,6 @@ class IPAdapter:
             k1 = self.key(prompt_embeds_.to("cpu").to(torch.float))
             v1 = self.value(prompt_embeds_.to("cpu").to(torch.float))
             
-            #print(ip_tokens.shape)
-            #print(encoder_hidden_states.shape)
-
             attn_weights = torch.bmm(q1, k1.transpose(1, 2)) / math.sqrt(v1.size(-1))
             attn_weights = self.softmax(attn_weights)
 
@@ -260,6 +249,7 @@ class IPAdapter:
 
         return images
 
+#MODIFIED
 
 class IPAdapterXL(IPAdapter):
     """SDXL"""
