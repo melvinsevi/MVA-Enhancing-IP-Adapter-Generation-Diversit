@@ -60,7 +60,7 @@ mv MVA-Enhancing-IP-Adapter-Generation-Diversity IPAdapter
 ### Inference
 
 ```bash
-python tes2.py
+python test2.py
 ```
 
 #Notes
