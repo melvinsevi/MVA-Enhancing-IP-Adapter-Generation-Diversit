@@ -1,6 +1,6 @@
 ## Introduction
 
-Text-to-image diffusion models have demonstrated impressive capabilities in generating high-quality images. However, generating highly specific images solely through text prompts presents challenges, particularly in prompt engineering. The **IP-Adapter**, a lightweight is solution with only 22 million parameters, designed to address these challenges. But it lacks of variation in generated images. So in our project we aim to enhance the model using a cross attention between text and image features before doing the decouple crossed attention they talked about in the paper.
+Text-to-image diffusion models have demonstrated impressive capabilities in generating high-quality images. However, generating highly specific images solely through text prompts presents challenges, particularly in prompt engineering. The **IP-Adapter** is a lightweight solution with only 22 million parameters, designed to address these challenges. But it lacks of variation in generated images. So in our project we aim to enhance the model using a cross attention between text and image features before doing the decouple crossed attention they talked about in the paper.
 
 <div style="display:flex; justify-content:center;">
     <img src="https://github.com/melvinsevi/MVA-Enhancing-IP-Adapter-Generation-Diversity/blob/main/Diagramme_features.png" alt="Image 1" width="300" style="margin-right: 20px;">
