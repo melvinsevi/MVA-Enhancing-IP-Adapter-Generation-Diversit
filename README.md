@@ -7,6 +7,8 @@ Text-to-image diffusion models have demonstrated impressive capabilities in gene
     <img src="https://github.com/melvinsevi/MVA-Enhancing-IP-Adapter-Generation-Diversity/blob/main/Capture%20d'%C3%A9cran%202024-01-16%20030415.png" alt="Image 2" width="400">
 </div>
 
+Here's a figure of our modification and at the right the figure from the original model extracted from the paper.
+
 ## Features
 
 - **Additional Image Prompt Capability:** IP-Adapter enhances pretrained text-to-image diffusion models by introducing an extra image prompt capability.
