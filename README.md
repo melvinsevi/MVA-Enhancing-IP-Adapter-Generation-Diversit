@@ -72,6 +72,10 @@ python preprocessing_data.py
 python test2.py
 ```
 
+### Details
+
+For more details, youc can directly see the README of the original paper in the IP_Adapter folder
+
 #Notes
 
 Note that all the files that we modified have the _new extension in their name (example: ip_adapter_new.py)
