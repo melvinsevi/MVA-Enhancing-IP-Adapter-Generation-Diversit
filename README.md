@@ -39,7 +39,18 @@ mv /content/IP-Adapter/* /content/IP-MVA-Enhancing-IP-Adapter-Generation-Diversi
 mv MVA-Enhancing-IP-Adapter-Generation-Diversity IPAdapter
 
 ```
+
+### Preprocessing
+
+
+
 ### Training
+
+To download the dataset from huggingface, run :
+
+```bash
+python preprocessing_data.py
+```
 
 ```bash
 !accelerate launch --num_processes 1 \
